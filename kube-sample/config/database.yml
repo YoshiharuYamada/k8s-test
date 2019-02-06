@@ -1,0 +1,22 @@
+default: &default
+  adapter:  mysql2
+  encoding: utf8mb4
+  pool:     <%= ENV.fetch('RAILS_MAX_THREADS') { 5 } %>
+  username: root
+  password: <%= ENV['MYSQL_ROOT_PASSWORD'] %>
+  host:     mysql
+
+development:
+  <<: *default
+  database: kube-sample_development
+
+test:
+  <<: *default
+  database: kube-sample_test
+
+production:
+  <<: *default
+  host:     <%= ENV['MYSQL_HOST'] %>
+  username: <%= ENV['MYSQL_USER'] %>
+  password: <%= ENV['MYSQL_PASSWORD'] %>
+  database: <%= ENV['MYSQL_DATABASE'] %>

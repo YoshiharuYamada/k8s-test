@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <meta charset="utf-8">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_pack_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
+  </head>
+  <body class="skin-blue sidebar-collapse">
+    <div class="wrapper">
+      <header class="main-header">
+        <%= link_to root_path, class: 'logo' do %>
+          <%= image_pack_tag 'images/logo.png' %>
+        <% end %>
+        <nav class="navbar navbar-static-top"></nav>
+      </header>
+
+      <div class="content-wrapper">
+        <%= bootstrap_flash %>
+        <%= yield %>
+      </div>
+
+      <footer class="main-footer">
+        <strong>Copyright © xxx.</strong> All Rights Reserved.
+      </footer>
+    </div>
+  </body>
+</html>
