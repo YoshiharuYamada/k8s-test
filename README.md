@@ -71,6 +71,12 @@ $ kubectl apply -f /vagrant/install/rook/cluster.yaml
 $ kubectl apply -f /vagrant/install/rook/storageclass.yaml
 ```
 
+vagrant@kube-master:~$ kubectl get nodes
+NAME          STATUS     ROLES    AGE     VERSION
+kube-master   NotReady   master   2m39s   v1.13.3
+
+NotReadyだと使えない
+
 - /etc/kubernetes/admin.conf
   - 構築したKubernetesクラスタの認証情報
 - flannel
@@ -89,6 +95,7 @@ $ kubectl apply -f /vagrant/install/rook/storageclass.yaml
   - ベンダー実装のためKubernetes本体にIngressの設定は含まれない
   - mandatory.yamlのダウンロード元
     - https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.22.0/deploy/mandatory.yaml
+  メモ： コンテナ内で動くL7ロードバランサー
 - metrics-server
   - Kubernetes製のメトリクスプラグイン(kubectl topコマンドで必要)
   - ベンダー実装のためKubernetes本体にメトリクスの設定は含まれない
@@ -155,7 +162,7 @@ $ kubectl top node
 - Pod
 
 ```sh
-$ kubectl top pod [--all-namespaces]
+$ kubectl top pod [--all-namespaces] 
 ```
 
 #### コンテナログイン
@@ -191,6 +198,14 @@ $ kubectl apply -f /vagrant/deploy/mysql/mysql-secret.yml
 $ kubectl apply -f /vagrant/deploy/mysql/mysql-deployment.yml
 $ kubectl apply -f /vagrant/deploy/mysql/mysql-service.yml
 ```
+livenessProbe
+条件が成り立たなくなった場合コンテナを作り直す
+
+readinessProbe
+トラフィックが受け取れるか
+
+redources:
+requests:
 
 ### App
 
@@ -204,6 +219,11 @@ $ kubectl apply -f /vagrant/deploy/app/app-service.yml
 $ kubectl apply -f /vagrant/deploy/app/app-ingress.yml
 ```
 
+注意:rails c をやる場合それ専用のコンテナを作成する。メモリがパンクする可能性がある
+
+
+
+
 ホストOSのhostsファイルに以下を追加し、ブラウザでアクセス
 
 ```
@@ -211,7 +231,7 @@ $ kubectl apply -f /vagrant/deploy/app/app-ingress.yml
 ```
 
 設定ファイル変更後の反映
-
+設定ファイル変更後は再起動しなければならない
 ```sh
 $ kubectl set env deploy/app-deployment RELOAD_DATE="$(date)"
 ```
@@ -244,3 +264,10 @@ $ kubectl get svc kubernetes-dashboard -n kube-system
 ```
 
 プラウザで、`https://172.16.0.10:xxx/`にアクセスして、トークンをチェックして、控えたtokenでサインイン
+
+
+deamonset
+Prometheus
+Alpine Linux
+debian Linux
+使えるようにする
