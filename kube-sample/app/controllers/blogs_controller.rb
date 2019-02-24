@@ -16,6 +16,7 @@ class BlogsController < ApplicationController
   def create
     @blog = Blog.new(blog_params)
     if @blog.save
+      EchoJob.perform_later(@blog)
       redirect_to blogs_path, notice: 'Blog was successfully created.'
     else
       render :new
@@ -24,6 +25,7 @@ class BlogsController < ApplicationController
 
   def update
     if @blog.update(blog_params)
+      EchoJob.perform_later(@blog)
       redirect_to blogs_path, notice: 'Blog was successfully updated.'
     else
       render :edit

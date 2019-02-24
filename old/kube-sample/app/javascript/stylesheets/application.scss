@@ -1,0 +1,9 @@
+@import '~bootstrap/dist/css/bootstrap';
+@import '~admin-lte/dist/css/AdminLTE';
+@import '~admin-lte/dist/css/skins/skin-blue';
+
+.flash-messages {
+  .alert {
+    margin-bottom: 0;
+  }
+}

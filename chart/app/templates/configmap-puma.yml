@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Chart.Name }}-configmap-puma
+  labels:
+    app.kubernetes.io/name:       {{ .Chart.Name }}
+    app.kubernetes.io/instance:   {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+    helm.sh/chart:                {{ .Chart.Name }}-{{ .Chart.Version }}
+data:
+  puma.rb: |
+    threads_count = ENV.fetch('RAILS_MAX_THREADS') { 5 }
+    threads threads_count, threads_count
+
+    port       ENV.fetch('PORT') { 3000 }
+    bind       'unix:///app/tmp/sockets/puma.sock'
+    pidfile    '/app/tmp/pids/puma.pid'
+    state_path '/app/tmp/pids/puma.state'
+
+    environment ENV.fetch('RAILS_ENV') { 'production' }
+
+    plugin :tmp_restart

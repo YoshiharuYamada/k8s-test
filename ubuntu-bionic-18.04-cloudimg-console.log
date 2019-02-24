@@ -598,4 +598,270 @@ Welcome to [1mUbuntu 18.04.1 LTS[0m!
 
 Ubuntu 18.04.1 LTS docker-registry ttyS0
 
-docker-registry login: 
+docker-registry login: [[0;3         Stopping libcontainer container 628…07952c43855575e19d750522f52963899.
+         Stopping libcontainer container e02…09b0c29c509a206c924fb7ff9747df3fc.
+         Stopping libcontainer container e74…6330b07eb5988a8ad0885e571f76a0471.
+[[0;32m  OK  [0m] Stopped target Cloud-init target.
+         Stopping libcontainer container 6a0…7489be376d34e3c5b4a1548e6c87af019.
+[[0;32m  OK  [0m] Stopped target Graphical Interface.
+         Stopping libcontainer container 1d1…58467becde6a83c1de97a3af93ba40e76.
+         Stopping User Manager for UID 1000...
+         Stopping libcontainer container 0f1…c363fc4df37fd0eb341202461af365845.
+         Stopping Availability of block devices...
+         Stopping libcontainer container e8f…1bb25c95a5aa262f5e991ee71ed9e2255.
+         Stopping libcontainer container 619…e2882788e1c0e744a71f36aa68247d3d4.
+         Stopping libcontainer container 853…1d79242ceeb0186e4fda737784a0f6c28.
+[[0;32m  OK  [0m] Stopped target Host and Network Name Lookups.
+         Stopping libcontainer container 495…3085235543eb3d205400d68300107d264.
+         Stopping libcontainer container 90f…5727687f5139b31545234a3b41cf1756f.
+         Stopping Authorization Manager...
+         Stopping Accounts Service...
+[[0;32m  OK  [0m] Stopped Execute cloud user/final scripts.
+[[0;32m  OK  [0m] Stopped Apply the settings specified in cloud-config.
+[[0;32m  OK  [0m] Stopped target Multi-User System.
+         Stopping Docker Application Container Engine...
+         Stopping kubelet: The Kubernetes Node Agent...
+[[0;32m  OK  [0m] Stopped Wait until snapd is fully seeded.
+         Stopping OpenBSD Secure Shell server...
+         Stopping FUSE filesystem for LXC...
+         Stopping irqbalance daemon...
+[[0;32m  OK  [0m] Stopped target Login Prompts.
+         Stopping Serial Getty on ttyS0...
+         Stopping Deferred execution scheduler...
+         Stopping LSB: Record successful boot for GRUB...
+         Stopping LSB: automatic crash report generation...
+[[0;32m  OK  [0m] Stopped target Timers.
+[[0;32m  OK  [0m] Stopped Daily Cleanup of Temporary Directories.
+[[0;32m  OK  [0m] Stopped Discard unused blocks once a week.
+[[0;32m  OK  [0m] Stopped Daily apt upgrade and clean activities.
+[[0;32m  OK  [0m] Stopped Daily apt download activities.
+[[0;32m  OK  [0m] Stopped Message of the Day.
+         Stopping D-Bus System Message Bus...
+[[0;32m  OK  [0m] Stopped target System Time Synchronized.
+         Stopping libcontainer container 8c4…9a028e3372989552dd0fe07b633febcba.
+         Stopping libcontainer container 90f…072f40fcfbaaa170f92e6d66efc0ee463.
+         Stopping libcontainer container 5ec…343f2d274795e5410d53e0f28a71d7388.
+         Stopping LXD - container startup/shutdown...
+         Stopping System Logging Service...
+         Stopping Dispatcher daemon for systemd-networkd...
+         Stopping Virtualbox guest utils...
+         Stopping Session 8 of user vagrant.
+         Stopping Regular background program processing daemon...
+         Stopping Unattended Upgrades Shutdown...
+[[0;32m  OK  [0m] Stopped target Cloud-config availability.
+[[0;32m  OK  [0m] Closed Load/Save RF Kill Switch Status /dev/rfkill Watch.
+         Stopping libcontainer container 21f…b03c8d124535bcf6b124caac46cb1067b.
+         Stopping libcontainer container e44…0b9fc6b4c30bd01fcb1eeb908f2880e78.
+         Stopping Getty on tty1...
+[[0;32m  OK  [0m] Unmounted /var/lib/lxcfs.
+[[0;32m  OK  [0m] Stopped irqbalance daemon.
+[[0;32m  OK  [0m] Stopped Regular background program processing daemon.
+[[0;32m  OK  [0m] Stopped Dispatcher daemon for systemd-networkd.
+[[0;32m  OK  [0m] Stopped Accounts Service.
+[[0;32m  OK  [0m] Stopped System Logging Service.
+[[0;32m  OK  [0m] Stopped Deferred execution scheduler.
+[[0;32m  OK  [0m] Stopped Authorization Manager.
+[[0;32m  OK  [0m] Stopped Serial Getty on ttyS0.
+[[0;32m  OK  [0m] Stopped OpenBSD Secure Shell server.
+[[0;32m  OK  [0m] Stopped Getty on tty1.
+[[0;32m  OK  [0m] Stopped kubelet: The Kubernetes Node Agent.
+[[0;32m  OK  [0m] Stopped User Manager for UID 1000.
+[[0;32m  OK  [0m] Stopped D-Bus System Message Bus.
+[[0;32m  OK  [0m] Stopped FUSE filesystem for LXC.
+[[0;32m  OK  [0m] Stopped libcontainer container 21f6…b03c8d124535bcf6b124caac46cb1067b.
+[[0;32m  OK  [0m] Stopped Unattended Upgrades Shutdown.
+[[0;32m  OK  [0m] Stopped Availability of block devices.
+[[0;32m  OK  [0m] Stopped libcontainer container e44d…0b9fc6b4c30bd01fcb1eeb908f2880e78.
+[[0;32m  OK  [0m] Stopped libcontainer container 628b…07952c43855575e19d750522f52963899.
+[[0;32m  OK  [0m] Stopped Session 8 of user vagrant.
+[[0;32m  OK  [0m] Stopped libcontainer container 6a03…7489be376d34e3c5b4a1548e6c87af019.
+[[0;32m  OK  [0m] Stopped libcontainer container 5ec0…343f2d274795e5410d53e0f28a71d7388.
+[[0;32m  OK  [0m] Stopped libcontainer container 90f1…5727687f5139b31545234a3b41cf1756f.
+[[0;32m  OK  [0m] Stopped libcontainer container 4953…3085235543eb3d205400d68300107d264.
+[[0;32m  OK  [0m] Stopped libcontainer container 1d1b…58467becde6a83c1de97a3af93ba40e76.
+[[0;32m  OK  [0m] Stopped libcontainer container 0f10…c363fc4df37fd0eb341202461af365845.
+[[0;32m  OK  [0m] Stopped libcontainer container e8f4…1bb25c95a5aa262f5e991ee71ed9e2255.
+[[0;32m  OK  [0m] Stopped libcontainer container 8538…1d79242ceeb0186e4fda737784a0f6c28.
+[[0;32m  OK  [0m] Stopped libcontainer container 619f…e2882788e1c0e744a71f36aa68247d3d4.
+[[0;32m  OK  [0m] Stopped libcontainer container e022…09b0c29c509a206c924fb7ff9747df3fc.
+[[0;32m  OK  [0m] Stopped libcontainer container e744…6330b07eb5988a8ad0885e571f76a0471.
+[[0;32m  OK  [0m] Stopped LXD - container startup/shutdown.
+[[0;32m  OK  [0m] Removed slice libcontainer containe…29f9_11e9_abba_02f019990e05.slice.
+[[0;32m  OK  [0m] Removed slice libcontainer containe…29f9_11e9_abba_02f019990e05.slice.
+[[0;32m  OK  [0m] Removed slice libcontainer containe…0ba6af11c0e0895a2304e4b865e.slice.
+[[0;32m  OK  [0m] Removed slice libcontainer containe…29f9_11e9_abba_02f019990e05.slice.
+[[0;32m  OK  [0m] Removed slice libcontainer containe…cc86501dde5579ce80285c0bf0c.slice.
+[[0;32m  OK  [0m] Removed slice libcontainer containe…6bbbb7f71b37ec97822a0c233b4.slice.
+[[0;32m  OK  [0m] Removed slice libcontainer container kubepods-burstable.slice.
+[[0;32m  OK  [0m] Removed slice User Slice of vagrant.
+         Stopping Login Service...
+[[0;32m  OK  [0m] Removed slice system-getty.slice.
+         Stopping Permit User Sessions...
+[[0;32m  OK  [0m] Removed slice system-serial\x2dgetty.slice.
+[[0;32m  OK  [0m] Stopped LSB: Record successful boot for GRUB.
+[[0;32m  OK  [0m] Stopped LSB: automatic crash report generation.
+[[0;32m  OK  [0m] Stopped Virtualbox guest utils.
+[[0;32m  OK  [0m] Stopped Permit User Sessions.
+[[0;32m  OK  [0m] Stopped target Remote File Systems.
+[[0;32m  OK  [0m] Stopped target Remote File Systems (Pre).
+[[0;32m  OK  [0m] Stopped Login Service.
+[[0;32m  OK  [0m] Stopped target User and Group Name Lookups.
+[[0;32m  OK  [0m] Stopped libcontainer container 8c44…9a028e3372989552dd0fe07b633febcba.
+[[0;32m  OK  [0m] Removed slice libcontainer containe…29f9_11e9_abba_02f019990e05.slice.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container…5e5410d53e0f28a71d7388/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container…fd0eb341202461af365845/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/…c2ff828ecfca0bf7ee3ffc9f6b/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/…e25442a8a9a83f748e01fe1c5b/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/…0c3e8fac15475f4848033c1cf0/merged.
+[[0;32m  OK  [0m] Stopped libcontainer container 90f2…072f40fcfbaaa170f92e6d66efc0ee463.
+[[0;32m  OK  [0m] Removed slice libcontainer containe…e763bc8560140c466c3b7e1daae.slice.
+[[0;32m  OK  [0m] Removed slice libcontainer container kubepods-besteffort.slice.
+[[0;32m  OK  [0m] Removed slice libcontainer container kubepods.slice.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/…8028169570979effc5e2b151a3/merged.
+[[0;32m  OK  [0m] Unmounted /run/docker/netns/dc88b0572f2f.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container…0e744a71f36aa68247d3d4/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/…a082abcdb50769e3a68419cf86/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container…bd01fcb1eeb908f2880e78/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/…5567a7000e47c7d2243e5501fe/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/…f2084d2b66aace0c6c5a8d7593/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/…9a2a63efa7a5644110b8b81d16/merged.
+[[0;32m  OK  [0m] Unmounted /run/docker/netns/07529942b3a8.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container…a262f5e991ee71ed9e2255/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/…a26867c362f0c6e3d3e3e22813/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container…88a8ad0885e571f76a0471/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/…629f61e21e4e807cb65fde3949/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/…334fa039f92df5bc74fc0f97a9/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/…3d7be48a4d3299e69639d394c1/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container…a83c1de97a3af93ba40e76/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/…390bd53e4f3ddf3172b7a8972a/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/…8d1787d0c4c032e703751306b5/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/…4859d4050a07d64509049b354f/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container…0186e4fda737784a0f6c28/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/…8a495fa9810131a65e8c55b15b/merged.
+[[0;32m  OK  [0m] Stopped Docker Application Container Engine.
+[[0;32m  OK  [0m] Stopped target Network is Online.
+[[0;32m  OK  [0m] Stopped target Network.
+         Stopping Network Name Resolution...
+[[0;32m  OK  [0m] Stopped target Basic System.
+[[0;32m  OK  [0m] Stopped target Sockets.
+[[0;32m  OK  [0m] Closed ACPID Listen Socket.
+[[0;32m  OK  [0m] Closed Socket activation for snappy daemon.
+[[0;32m  OK  [0m] Closed D-Bus System Message Bus Socket.
+[[0;32m  OK  [0m] Closed LXD - unix socket.
+[[0;32m  OK  [0m] Closed Syslog Socket.
+[[0;32m  OK  [0m] Closed UUID daemon activation socket.
+[[0;32m  OK  [0m] Closed Open-iSCSI iscsid Socket.
+[[0;32m  OK  [0m] Stopped target Slices.
+[[0;32m  OK  [0m] Removed slice User and Session Slice.
+[[0;32m  OK  [0m] Stopped target Paths.
+[[0;32m  OK  [0m] Stopped ACPI Events Check.
+[[0;32m  OK  [0m] Closed Docker Socket for the API.
+[[0;32m  OK  [0m] Stopped target System Initialization.
+         Stopping Load/Save Random Seed...
+[[0;32m  OK  [0m] Stopped Initial cloud-init job (metadata service crawler).
+[[0;32m  OK  [0m] Stopped target Local Encrypted Volumes.
+[[0;32m  OK  [0m] Stopped Forward Password Requests to Wall Directory Watch.
+[[0;32m  OK  [0m] Stopped Dispatch Password Requests to Console Directory Watch.
+         Stopping Update UTMP about System Boot/Shutdown...
+[[0;32m  OK  [0m] Stopped Network Name Resolution.
+[[0;32m  OK  [0m] Stopped Load/Save Random Seed.
+         Stopping Network Service...
+[[0;32m  OK  [0m] Stopped Update UTMP about System Boot/Shutdown.
+[[0;32m  OK  [0m] Stopped Create Volatile Files and Directories.
+[[0;32m  OK  [0m] Stopped target Local File Systems.
+         Unmounting /var/lib/kubelet/pods/9d…s.io~secret/coredns-token-nrx2v...
+         Unmounting /run/docker/netns/default...
+         Unmounting /vagrant...
+         Unmounting /run/user/1000...
+         Unmounting /var/lib/kubelet/pods/9d…s.io~secret/coredns-token-nrx2v...
+         Unmounting /var/lib/kubelet/pods/9d…o~secret/kube-proxy-token-dfp92...
+         Unmounting /var/lib/kubelet/pods/ee…s.io~secret/flannel-token-qgml8...
+[[0;32m  OK  [0m] Stopped Network Service.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/9d8…tes.io~secret/coredns-token-nrx2v.
+[[0;32m  OK  [0m] Unmounted /run/docker/netns/default.
+[[0;32m  OK  [0m] Unmounted /vagrant.
+[[0;32m  OK  [0m] Unmounted /run/user/1000.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/9d8…tes.io~secret/coredns-token-nrx2v.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/9d8….io~secret/kube-proxy-token-dfp92.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/eed…tes.io~secret/flannel-token-qgml8.
+[[0;32m  OK  [0m] Reached target Unmount All Filesystems.
+[[0;32m  OK  [0m] Stopped target Local File Systems (Pre).
+[[0;32m  OK  [0m] Stopped Create Static Device Nodes in /dev.
+         Stopping Monitoring of LVM2 mirrors…ng dmeventd or progress polling...
+[[0;32m  OK  [0m] Stopped target Swap.
+[[0;32m  OK  [0m] Stopped Apply Kernel Variables.
+[[0;32m  OK  [0m] Stopped Load Kernel Modules.
+[[0;32m  OK  [0m] Stopped target Network (Pre).
+[[0;32m  OK  [0m] Stopped Initial cloud-init job (pre-networking).
+[[0;32m  OK  [0m] Stopped Remount Root and Kernel File Systems.
+[[0;32m  OK  [0m] Reached target Shutdown.
+[[0;32m  OK  [0m] Reached target Final Step.
+         Starting Power-Off...
+[[0;32m  OK  [0m] Stopped Monitoring of LVM2 mirrors,…sing dmeventd or progress polling.
+         Stopping LVM2 metadata daemon...
+[[0;32m  OK  [0m] Stopped LVM2 metadata daemon.
+[ 9800.258473] reboot: Power down
+ed Syslog Socket.
+[[0;32m  OK  [0m] Stopped target Paths.
+[[0;32m  OK  [0m] Stopped ACPI Events Check.
+[[0;32m  OK  [0m] Closed Docker Socket for the API.
+[[0;32m  OK  [0m] Stopped target System Initialization.
+[[0;32m  OK  [0m] Stopped target Local Encrypted Volumes.
+[[0;32m  OK  [0m] Stopped Forward Password Requests to Wall Directory Watch.
+[[0;32m  OK  [0m] Stopped Dispatch Password Requests to Console Directory Watch.
+[[0;32m  OK  [0m] Stopped Initial cloud-init job (metadata service crawler).
+         Stopping Update UTMP about System Boot/Shutdown...
+         Stopping Load/Save Random Seed...
+[[0;32m  OK  [0m] Stopped Network Name Resolution.
+         Stopping Network Service...
+[[0;32m  OK  [0m] Stopped Load/Save Random Seed.
+[[0;32m  OK  [0m] Stopped Update UTMP about System Boot/Shutdown.
+[[0;32m  OK  [0m] Stopped Create Volatile Files and Directories.
+[[0;32m  OK  [0m] Stopped target Local File Systems.
+         Unmounting /var/lib/kubelet/pods/3b…et/rook-ceph-system-token-wpdsz...
+         Unmounting /var/lib/kubelet/pods/1b…ress-serviceaccount-token-vl22b...
+         Unmounting /var/lib/kubelet/pods/61…et/rook-ceph-system-token-wpdsz...
+         Unmounting /var/lib/kubelet/pods/36…cret/metrics-server-token-6f7tn...
+         Unmounting /run/docker/netns/default...
+         Unmounting /run/user/1000...
+         Unmounting /var/lib/kubelet/pods/61…et/rook-ceph-system-token-wpdsz...
+         Unmounting /var/lib/kubelet/pods/e4…s.io~secret/speaker-token-m9zxj...
+         Unmounting /vagrant...
+         Unmounting /var/lib/kubelet/pods/d8…o~secret/kube-proxy-token-dfp92...
+         Unmounting /var/lib/kubelet/pods/0e…o~secret/controller-token-wtrkb...
+         Unmounting /var/lib/kubelet/pods/b8…s.io~secret/default-token-7ggs4...
+         Unmounting /var/lib/kubelet/pods/d8…s.io~secret/flannel-token-qgml8...
+         Unmounting /var/lib/kubelet/pods/dc…ecret/rook-ceph-osd-token-xncsc...
+[[0;32m  OK  [0m] Stopped Network Service.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/3b0…cret/rook-ceph-system-token-wpdsz.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/1b1…ngress-serviceaccount-token-vl22b.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/613…cret/rook-ceph-system-token-wpdsz.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/361…secret/metrics-server-token-6f7tn.
+[[0;32m  OK  [0m] Unmounted /run/docker/netns/default.
+[[0;32m  OK  [0m] Unmounted /run/user/1000.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/613…cret/rook-ceph-system-token-wpdsz.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/e48…tes.io~secret/speaker-token-m9zxj.
+[[0;32m  OK  [0m] Unmounted /vagrant.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/d89….io~secret/kube-proxy-token-dfp92.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/0e5….io~secret/controller-token-wtrkb.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/b87…tes.io~secret/default-token-7ggs4.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/d89…tes.io~secret/flannel-token-qgml8.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/dca…~secret/rook-ceph-osd-token-xncsc.
+[[0;32m  OK  [0m] Reached target Unmount All Filesystems.
+[[0;32m  OK  [0m] Stopped target Swap.
+[[0;32m  OK  [0m] Stopped target Local File Systems (Pre).
+[[0;32m  OK  [0m] Stopped Create Static Device Nodes in /dev.
+         Stopping Monitoring of LVM2 mirrors…ng dmeventd or progress polling...
+[[0;32m  OK  [0m] Stopped target Network (Pre).
+[[0;32m  OK  [0m] Stopped Initial cloud-init job (pre-networking).
+[[0;32m  OK  [0m] Stopped Remount Root and Kernel File Systems.
+[[0;32m  OK  [0m] Stopped Apply Kernel Variables.
+[[0;32m  OK  [0m] Stopped Load Kernel Modules.
+[[0;32m  OK  [0m] Reached target Shutdown.
+[[0;32m  OK  [0m] Reached target Final Step.
+         Starting Power-Off...
+[[0;32m  OK  [0m] Stopped Monitoring of LVM2 mirrors,…sing dmeventd or progress polling.
+         Stopping LVM2 metadata daemon...
+[[0;32m  OK  [0m] Stopped LVM2 metadata daemon.
+[ 9771.201561] reboot: Power down
+4442f20e23dc0518f (27s / 1min 30s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A stop job is running for libcontai…4442f20e23dc0518f (27s / 1min 30s)[K[    [0;31m*[0;1;31m*[0m] A stop job is running for libcontai…4442f20e23dc0518f (28s / 1min 30s)[K[     [0;31m*[0m] A stop job is running for libcontai…4442f20e23dc0518f (28s / 1min 30s)[K[    [0;31m*[0;1;31m*[0m] A stop job is running for libcontai…4442f20e23dc0518f (29s / 1min 30s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A stop job is running for libcontai…4442f20e23dc0518f (29s / 1min 30s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A stop job is running for libcontai…4442f20e23dc0518f (30s / 1min 30s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A stop job is running for libcontai…4442f20e23dc0518f (30s / 1min 30s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A stop job is running for libcontai…4442f20e23dc0518f (31s / 1min 30s)[K[[0;1;31m*[0m[0;31m*    [0m] A stop job is running for libcontai…4442f20e23dc0518f (31s / 1min 30s)[K[[0m[0;31m*     [0m] A stop job is running for libcontai…4442f20e23dc0518f (32s / 1min 30s)[K[[0;1;31m*[0m[0;31m*    [0m] A stop job is running for libcontai…4442f20e23dc0518f (32s / 1min 30s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A stop job is running for libcontai…4442f20e23dc0518f (33s / 1min 30s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A stop job is running for libcontai…4442f20e23dc0518f (33s / 1min 30s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A stop job is running for libcontai…4442f20e23dc0518f (34s / 1min 30s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A stop job is running for libcontai…4442f20e23dc0518f (34s / 1min 30s)[K[    [0;31m*[0;1;31m*[0m] A stop job is running for libcontai…4442f20e23dc0518f (35s / 1min 30s)[K[     [0;31m*[0m] A stop job is running for libcontai…4442f20e23dc0518f (35s / 1min 30s)[K[    [0;31m*[0;1;31m*[0m] A stop job is running for libcontai…4442f20e23dc0518f (36s / 1min 30s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A stop job is running for libcontai…4442f20e23dc0518f (36s / 1min 30s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A stop job is running for libcontai…4442f20e23dc0518f (37s / 1min 30s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A stop job is running for libcontai…4442f20e23dc0518f (37s / 1min 30s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A stop job is running for libcontai…4442f20e23dc0518f (38s / 1min 30s)[K[[0;1;31m*[0m[0;31m*    [0m] A stop job is running for libcontai…4442f20e23dc0518f (38s / 1min 30s)[K[[0m[0;31m*     [0m] A stop job is running for libcontai…4442f20e23dc0518f (39s / 1min 30s)[K[[0;1;31m*[0m[0;31m*    [0m] A stop job is running for libcontai…4442f20e23dc0518f (39s / 1min 30s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A stop job is running for libcontai…4442f20e23dc0518f (40s / 1min 30s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A stop job is running for libcontai…4442f20e23dc0518f (40s / 1min 30s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A stop job is running for libcontai…4442f20e23dc0518f (41s / 1min 30s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A stop job is running for libcontai…4442f20e23dc0518f (41s / 1min 30s)[K[    [0;31m*[0;1;31m*[0m] A stop job is running for libcontai…4442f20e23dc0518f (42s / 1min 30s)[K[     [0;31m*[0m] A stop job is running for libcontai…4442f20e23dc0518f (42s / 1min 30s)[K[    [0;31m*[0;1;31m*[0m] A stop job is running for libcontai…4442f20e23dc0518f (43s / 1min 30s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A stop job is running for libcontai…4442f20e23dc0518f (43s / 1min 30s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A stop job is running for libcontai…4442f20e23dc0518f (44s / 1min 30s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A stop job is running for libcontai…4442f20e23dc0518f (44s / 1min 30s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A stop job is running for libcontai…4442f20e23dc0518f (45s / 1min 30s)[K[[0;1;31m*[0m[0;31m*    [0m] A stop job is running for libcontai…4442f20e23dc0518f (45s / 1min 30s)[K[[0m[0;31m*     [0m] A stop job is running for libcontai…4442f20e23dc0518f (46s / 1min 30s)[K[[0;1;31m*[0m[0;31m*    [0m] A stop job is running for libcontai…4442f20e23dc0518f (46s / 1min 30s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A stop job is running for libcontai…4442f20e23dc0518f (47s / 1min 30s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A stop job is running for libcontai…4442f20e23dc0518f (47s / 1min 30s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A stop job is running for libcontai…4442f20e23dc0518f (48s / 1min 30s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A stop job is running for libcontai…4442f20e23dc0518f (48s / 1min 30s)[K[    [0;31m*[0;1;31m*[0m] A stop job is running for libcontai…4442f20e23dc0518f (49s / 1min 30s)[K[     [0;31m*[0m] A stop job is running for libcontai…4442f20e23dc0518f (49s / 1min 30s)[K[    [0;31m*[0;1;31m*[0m] A stop job is running for libcontai…4442f20e23dc0518f (50s / 1min 30s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A stop job is running for libcontai…4442f20e23dc0518f (50s / 1min 30s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A stop job is running for libcontai…4442f20e23dc0518f (51s / 1min 30s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A stop job is running for libcontai…4442f20e23dc0518f (51s / 1min 30s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A stop job is running for libcontai…4442f20e23dc0518f (52s / 1min 30s)[K[[0;1;31m*[0m[0;31m*    [0m] A stop job is running for libcontai…4442f20e23dc0518f (52s / 1min 30s)[K[[0m[0;31m*     [0m] A stop job is running for libcontai…4442f20e23dc0518f (53s / 1min 30s)[K[[0;1;31m*[0m[0;31m*    [0m] A stop job is running for libcontai…4442f20e23dc0518f (53s / 1min 30s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A stop job is running for libcontai…4442f20e23dc0518f (54s / 1min 30s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A stop job is running for libcontai…4442f20e23dc0518f (54s / 1min 30s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A stop job is running for libcontai…4442f20e23dc0518f (55s / 1min 30s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A stop job is running for libcontai…4442f20e23dc0518f (55s / 1min 30s)[K[    [0;31m*[0;1;31m*[0m] A stop job is running for libcontai…4442f20e23dc0518f (56s / 1min 30s)[K[     [0;31m*[0m] A stop job is running for libcontai…4442f20e23dc0518f (56s / 1min 30s)[K[    [0;31m*[0;1;31m*[0m] A stop job is running for libcontai…4442f20e23dc0518f (57s / 1min 30s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A stop job is running for libcontai…4442f20e23dc0518f (57s / 1min 30s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A stop job is running for libcontai…4442f20e23dc0518f (58s / 1min 30s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A stop job is running for libcontai…4442f20e23dc0518f (58s / 1min 30s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A stop job is running for libcontai…4442f20e23dc0518f (59s / 1min 30s)[K[[0;1;31m*[0m[0;31m*    [0m] A stop job is running for libcontai…4442f20e23dc0518f (59s / 1min 30s)

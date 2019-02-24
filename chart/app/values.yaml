@@ -1,0 +1,42 @@
+env:
+  configmap:
+    MYSQL_HOST:     mysql-service
+    MYSQL_DATABASE: kube-sample_production
+    MYSQL_USER:     sample
+    REDIS_HOST:     redis-service
+  secret:
+    SECRET_KEY_BASE: e3bf7682f05b3927809baa3dd535ae6134fdb660aae8ed148eee5f1051e988925a9f0944a46cbd4483c44204d1a4137526c2cb1ce521555e89d8f2ab5f307d9b
+    MYSQL_PASSWORD:  password
+
+pod:
+  nginx:
+    image: nginx:1.14.2-alpine
+    resources:
+      memory: 32Mi
+    port: 80
+  app: &app_base
+    image: 172.16.0.30:5000/kube-sample:1.0.0
+    resources:
+      memory: 256Mi
+  puma:
+    <<: *app_base
+    port: 3000
+  sidekiq:
+    <<: *app_base
+    port: 7433
+
+deployment:
+  puma:
+    replicas: 2
+  sidekiq:
+    replicas: 1
+
+service:
+  type: NodePort # ClusterIP or NodePort or LoadBalancer
+  # clusterIP: None
+  port: 80
+
+ingress:
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+  host: sample.example.com

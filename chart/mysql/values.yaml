@@ -1,0 +1,26 @@
+persistent_volume_claim:
+  storageClassName: rook-ceph-block
+  storage: 1Gi
+
+env:
+  configmap:
+    MYSQL_DATABASE: kube-sample_production
+    MYSQL_USER:     sample
+  secret:
+    MYSQL_ROOT_PASSWORD: mysql
+    MYSQL_PASSWORD:      password
+
+deployment:
+  enabled: true
+  replicas: 1
+  mysql:
+    image: mysql:5.7.24
+    resources:
+      memory: 256Mi
+    port: 3306
+
+service:
+  type: ClusterIP # ClusterIP or NodePort or ExternalName
+  clusterIP: None
+  # externalName: my.database.example.com
+  port: 3306

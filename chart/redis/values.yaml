@@ -1,0 +1,18 @@
+persistent_volume_claim:
+  storageClassName: rook-ceph-block
+  storage: 1Gi
+
+deployment:
+  enabled: true
+  replicas: 1
+  redis:
+    image: redis:5.0.3-alpine
+    resources:
+      memory: 256Mi
+    port: 6379
+
+service:
+  type: ClusterIP # ClusterIP or NodePort or ExternalName
+  clusterIP: None
+  # externalName: my.redis.example.com
+  port: 6379

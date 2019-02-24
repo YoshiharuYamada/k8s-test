@@ -7,7 +7,7 @@ Vagrant.configure('2') do |config|
 
   config.hostmanager.enabled = true
   config.vm.box              = 'ubuntu/bionic64'
-  config.vm.box_version      = '20190126.0.0'
+  config.vm.box_version      = '20190219.0.0'
 
   (0..3).each do |i|
     if i == 0 then
@@ -26,12 +26,11 @@ Vagrant.configure('2') do |config|
 
       server.vm.provider 'virtualbox' do |v|
         v.cpus = 2
-        v.memory = 2048
-        #v.memory = if hostname == 'kube-master'
-        #             2048
-        #           else
-        #             1536
-        #           end
+        v.memory = if hostname == 'kube-master'
+                     2048
+                   else
+                     1536
+                   end
         v.gui = false
       end
       server.vm.provision 'shell', inline: <<-SHELL

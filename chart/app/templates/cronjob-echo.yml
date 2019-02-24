@@ -1,0 +1,39 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: {{ .Chart.Name }}-cronjob-echo
+  labels:
+    app.kubernetes.io/name:       {{ .Chart.Name }}
+    app.kubernetes.io/instance:   {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+    helm.sh/chart:                {{ .Chart.Name }}-{{ .Chart.Version }}
+spec:
+  concurrencyPolicy: Forbid
+  schedule: "*/1 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: echo
+              image: {{ .Values.pod.app.image }}
+              imagePullPolicy: Always
+              command:
+                - bundle
+                - exec
+                - rake
+                - cron:echo
+              resources:
+                requests:
+                  memory: {{ .Values.pod.app.resources.memory }}
+                limits:
+                  memory: {{ .Values.pod.app.resources.memory }}
+              envFrom:
+                - configMapRef:
+                    name: {{ .Chart.Name }}-configmap-env
+                - secretRef:
+                    name: {{ .Chart.Name }}-secret-env
+          restartPolicy: Never
+      backoffLimit: 1
+      parallelism:  1
+      completions:  1

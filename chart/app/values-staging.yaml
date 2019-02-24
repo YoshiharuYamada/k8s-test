@@ -1,0 +1,12 @@
+env:
+  secret:
+    SECRET_KEY_BASE: a3bf7682f05b3927809baa3dd535ae6134fdb660aae8ed148eee5f1051e988925a9f0944a46cbd4483c44204d1a4137526c2cb1ce521555e89d8f2ab5f307d9b
+
+deployment:
+  puma:
+    replicas: 1
+  sidekiq:
+    replicas: 1
+
+ingress:
+  host: stg-sample.example.com

@@ -56,6 +56,8 @@ $ vagrant destroy
 
 ```sh
 $ vagrant ssh kube-master
+$ echo "source <(kubectl completion bash)" >> ~/.bashrc
+$ exec $SHELL -l
 $ sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=172.16.0.10
 $ mkdir -p $HOME/.kube
 $ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
@@ -70,12 +72,6 @@ $ kubectl apply -f /vagrant/install/rook/operator.yaml
 $ kubectl apply -f /vagrant/install/rook/cluster.yaml
 $ kubectl apply -f /vagrant/install/rook/storageclass.yaml
 ```
-
-vagrant@kube-master:~$ kubectl get nodes
-NAME          STATUS     ROLES    AGE     VERSION
-kube-master   NotReady   master   2m39s   v1.13.3
-
-NotReadyだと使えない
 
 - /etc/kubernetes/admin.conf
   - 構築したKubernetesクラスタの認証情報
@@ -95,7 +91,6 @@ NotReadyだと使えない
   - ベンダー実装のためKubernetes本体にIngressの設定は含まれない
   - mandatory.yamlのダウンロード元
     - https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.22.0/deploy/mandatory.yaml
-  メモ： コンテナ内で動くL7ロードバランサー
 - metrics-server
   - Kubernetes製のメトリクスプラグイン(kubectl topコマンドで必要)
   - ベンダー実装のためKubernetes本体にメトリクスの設定は含まれない
@@ -162,7 +157,7 @@ $ kubectl top node
 - Pod
 
 ```sh
-$ kubectl top pod [--all-namespaces] 
+$ kubectl top pod [--all-namespaces] [--containers]
 ```
 
 #### コンテナログイン
@@ -184,90 +179,3 @@ $ stern "Pod名の部分文字列" [-c コンテナ名]
 ```sh
 $ stern "app-deploy" -c puma
 ```
-
-## デプロイ
-
-kube-masterにSSHでログインしている前提
-
-### MySQL
-
-```sh
-$ kubectl apply -f /vagrant/deploy/mysql/mysql-volume-claim.yml
-$ kubectl apply -f /vagrant/deploy/mysql/mysql-configmap.yml
-$ kubectl apply -f /vagrant/deploy/mysql/mysql-secret.yml
-$ kubectl apply -f /vagrant/deploy/mysql/mysql-deployment.yml
-$ kubectl apply -f /vagrant/deploy/mysql/mysql-service.yml
-```
-livenessProbe
-条件が成り立たなくなった場合コンテナを作り直す
-
-readinessProbe
-トラフィックが受け取れるか
-
-redources:
-requests:
-
-### App
-
-```sh
-$ kubectl apply -f /vagrant/deploy/app/app-secret.yml
-$ kubectl apply -f /vagrant/deploy/app/app-configmap-nginx.yml
-$ kubectl apply -f /vagrant/deploy/app/app-configmap-puma.yml
-$ kubectl apply -f /vagrant/deploy/app/app-job-migrate.yml
-$ kubectl apply -f /vagrant/deploy/app/app-deployment.yml
-$ kubectl apply -f /vagrant/deploy/app/app-service.yml
-$ kubectl apply -f /vagrant/deploy/app/app-ingress.yml
-```
-
-注意:rails c をやる場合それ専用のコンテナを作成する。メモリがパンクする可能性がある
-
-
-
-
-ホストOSのhostsファイルに以下を追加し、ブラウザでアクセス
-
-```
-172.16.0.50 sample.example.com
-```
-
-設定ファイル変更後の反映
-設定ファイル変更後は再起動しなければならない
-```sh
-$ kubectl set env deploy/app-deployment RELOAD_DATE="$(date)"
-```
-
-## Kubernetes Webダッシュボード
-
-kube-masterにSSHでログインしている前提
-
-```sh
-$ kubectl apply -f /vagrant/install/dashboard/kubernetes-dashboard.yaml
-$ kubectl apply -f /vagrant/install/dashboard/service-account.yaml
-$ kubectl apply -f /vagrant/install/dashboard/cluster-role-binding.yaml
-```
-
-- dashboard
-  - Kubernetes製のWebダッシュボード
-  - kubernetes-dashboard.yamlのダウンロード元
-    - https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml
-
-以下のコマンドで出力されるtokenを控える
-
-```sh
-$ kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}')
-```
-
-以下のコマンドで出力される`443:xxx/TCP`のxxxを控える
-
-```sh
-$ kubectl get svc kubernetes-dashboard -n kube-system
-```
-
-プラウザで、`https://172.16.0.10:xxx/`にアクセスして、トークンをチェックして、控えたtokenでサインイン
-
-
-deamonset
-Prometheus
-Alpine Linux
-debian Linux
-使えるようにする

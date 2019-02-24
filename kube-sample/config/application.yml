@@ -1,0 +1,14 @@
+common: &base
+  redis:
+    sidekiq:
+      url:    <%= "redis://#{ENV['REDIS_HOST']}/0" %>
+      driver: hiredis
+
+development:
+  <<: *base
+
+test:
+  <<: *base
+
+production:
+  <<: *base

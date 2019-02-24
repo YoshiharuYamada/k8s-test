@@ -26,7 +26,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'rubocop', '~> 0.63.0'
+  gem 'rubocop', '~> 0.63.1'
 end
 
 group :development do
@@ -37,3 +37,16 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
+
+# Configuration plugins
+gem 'settingslogic', '~> 2.0.9'
+
+# Redis plugins
+gem 'hiredis', '~> 0.6.3'
+
+# Background job plugins
+gem 'sidekiq',       '~> 5.2.5'
+gem 'sidekiq_alive', '~> 1.1.0'
+
+# Health check plugins
+gem 'okcomputer', '~> 1.17.3'

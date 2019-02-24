@@ -1,5 +1,6 @@
-FROM node:10.15.0-slim AS node-10
-FROM ruby:2.6.0 AS build
+FROM k8s.gcr.io/pause:3.1 AS pause
+FROM node:10.15.1-slim AS node-10
+FROM ruby:2.6.1 AS build
 
 ENV RAILS_ENV production
 ENV NODE_ENV production
@@ -19,11 +20,12 @@ RUN set -ex \
   && bundle exec rake tmp:create \
   && bundle exec rails webpacker:compile \
   && bundle exec rails tmp:clear \
+  && rm -rf app/javascript \
   && rm -rf node_modules \
   && rm -rf ~/.bundle \
   && rm -rf ~/.cache
 
-FROM ruby:2.6.0
+FROM ruby:2.6.1
 
 RUN set -ex \
   && apt-get update \
@@ -38,6 +40,7 @@ RUN set -ex \
 ENV LANG ja_JP.UTF-8
 
 USER app
+COPY --from=pause /pause /usr/local/bin/pause
 COPY --from=build /usr/local/bundle /usr/local/bundle
 COPY --from=build --chown=app:app /app /app
 WORKDIR /app

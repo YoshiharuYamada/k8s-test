@@ -1,0 +1,39 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ .Chart.Name }}-job-migrate
+  labels:
+    app.kubernetes.io/name:       {{ .Chart.Name }}
+    app.kubernetes.io/instance:   {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+    helm.sh/chart:                {{ .Chart.Name }}-{{ .Chart.Version }}
+  annotations:
+    helm.sh/hook: pre-install,pre-upgrade
+    helm.sh/hook-weight: "3"
+    helm.sh/hook-delete-policy: hook-succeeded
+spec:
+  template:
+    spec:
+      containers:
+        - name: migrate
+          image: {{ .Values.pod.app.image }}
+          imagePullPolicy: Always
+          command:
+            - bundle
+            - exec
+            - rake
+            - db:migrate
+          resources:
+            requests:
+              memory: {{ .Values.pod.app.resources.memory }}
+            limits:
+              memory: {{ .Values.pod.app.resources.memory }}
+          envFrom:
+            - configMapRef:
+                name: {{ .Chart.Name }}-configmap-env-pre
+            - secretRef:
+                name: {{ .Chart.Name }}-secret-env-pre
+      restartPolicy: Never
+  backoffLimit: 1
+  parallelism:  1
+  completions:  1
